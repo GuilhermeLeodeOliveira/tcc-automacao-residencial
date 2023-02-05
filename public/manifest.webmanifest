@@ -1,0 +1,19 @@
+{
+    "short_name" : " Automação Residencial ",
+    "name" : " 4House " ,
+    "start_url" : "index.php" ,
+    "display" : " standalone " ,
+    "theme_color" : "#ffffff " ,
+    "theme-color" : "#ffffff " ,
+    "background_color" : " #000000 " ,
+    "background-color" : " #000000 " ,
+    "description" : "Automação residencial",
+    "icons" : [
+      {
+        "src" : "img/logo/logo.png" ,
+        "type" : "image/png" ,
+        "sizes" : "3000x3000"
+        
+      }
+    ]
+  }

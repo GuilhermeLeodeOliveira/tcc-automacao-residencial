@@ -1,0 +1,405 @@
+*{
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*TELA DE LOGIN*/
+/* ini: Preloader */ 
+#preloader {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: #0093ee;
+    z-index:99999999; /* z-index para jogar para frente e sobrepor tudo */
+}
+#preloader .inner {
+    position: absolute;
+    top: 50%; /* centralizar a parte interna do preload (onde fica a animação)*/
+    left: 50%;
+    transform: translate(-50%, -50%);  
+}
+/* end: Preloader */
+
+/*pagina de login*/
+.pag-login{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+/*pagina de cadastro*/
+#pag-login{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.signup{
+    margin: 0 !important;
+    margin-top: 40vw;
+    min-width: 60vw;
+    min-height: 45vw;
+}
+.logo{
+    display: none;
+}
+.container-login{
+    margin: 20vw;
+    min-width: 35vw;
+    min-height: 17vw;
+}
+.pag-login .left-login{
+    position: relative;
+    overflow-y: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.pag-login .left-login .text-left-login{
+    width: 25vw;
+    position: absolute;
+    top: 10vw;
+    padding: 2vw;
+    min-width: 20vw;
+    
+    min-height: 17vw;
+    position: absolute;
+}
+.pag-login .left-login .text-left-login h1{
+    overflow-y: hidden;
+    line-height: 1.2;
+    color: white;
+    font-size: 60px;
+    font-weight: bolder;
+}
+.pag-login .left-login .text-left-login p{
+    margin-bottom: 10px;
+    margin-top: 20px;
+    color: #d6efff;
+    font-weight: normal;
+}
+.pag-login .left-login .text-left-login small{
+    top: 100px;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+}
+.container-login .top-login{
+    padding-top: 5vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.container-login .top-login h1{
+    font-size: 25px;
+    font-weight: bolder;
+    margin-bottom: 2vw;
+}
+.container-login .top-login input{
+    border: 1px solid rgba(128, 128, 128, 0.38) !important;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: rgb(245, 245, 245);
+    margin-top: 0px;
+    padding: 20px;
+    height: 3vw;
+    margin-bottom: 1vw;
+}
+.container-login .top-login .form-group{
+    width: 100%;
+    margin-top: 1vw;
+    display: flex;
+}
+.container-login .top-login .group-tel{
+    gap: 1vw;
+}
+.container-login .top-login label{
+    width: 20%;
+    font-weight: bolder !important;
+    font-size: 12px;
+}
+.container-login .top-login .form-group input,.form-control::placeholder{
+    font-size: 13px !important;
+}
+.container-login .top-login .form-group #cep,#localidade{
+    margin-right: 2vw;
+}
+.container-login .top-login .form-group #label-bairro{
+    width: 12%;
+}
+.container-login .top-login .form-group #localidade{
+    margin-left: 1.5vw;
+}
+.container-login .top-login .form-group input{
+    border: 1px solid rgba(128, 128, 128, 0.38) !important;
+    font-size: 12px;
+    width: 100% !important;
+}
+.container-login .top-login .form-password input{
+    width: 100%;
+}
+.container-login .top-login .form-password img{
+    cursor: pointer;
+    margin-top: 8px;
+    margin-right: 10px;
+    right: 0;
+    width: 22px;
+    position: absolute;
+}
+.container-login .top-login .form-password2 input{
+    width: 100%;
+}
+.container-login .top-login .form-password2 img{
+    cursor: pointer;
+    margin-top: 8px;
+    margin-right: 10px;
+    right: 0;
+    width: 22px;
+    position: absolute;
+}
+.signup .top-login .container-sexo select{
+    border-radius: 5px;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid rgba(128, 128, 128, 0.38);
+    padding: 5px 15px;
+    margin-bottom: 1.5vw;
+}
+.container-login .top-login small{
+    font-size: 14px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+.signup .top-login .telValid{
+    border: 3px solid rgb(136, 255, 136) !important;
+}
+.signup .top-login .telInvalid{
+    border: 3px solid rgb(255, 89, 89) !important;
+}
+.signup .top-login .valid{
+    border: 3px solid rgb(136, 255, 136) !important;
+}
+.signup .top-login .invalid{
+    border: 3px solid rgb(255, 89, 89) !important;
+}
+.signup .top-login #textValidate{
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+.container-login .top-login #entrar{
+    background-color: #0093ee;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    justify-content: center;
+    font-weight: bolder;
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 1vw;
+}
+.container-login .top-login .form-group-email input{
+    font-weight: bolder;
+    width: 100%;
+    padding-left: 60px !important;
+    position: relative;
+}
+.container-login .top-login .form-group-email svg{
+    width: 20px;
+    margin-left: 20px !important;
+    margin-top: 15px;
+    z-index: 50;
+    position: absolute;
+}
+.container-login .top-login .form-group-password input{
+    font-weight: bolder;
+    width: 100%;
+    padding-left: 60px !important;
+    position: relative;
+}
+.container-login .top-login .form-group-password svg{
+    width: 20px;
+    margin-left: 20px !important;
+    margin-top: 15px;
+    z-index: 50;
+    position: absolute;
+}
+.container-login .top-login .form-group-password img{
+    cursor: pointer;
+    margin-top: 15px;
+    margin-right: 10px;
+    right: 0;
+    width: 30px;
+    position: absolute;
+}
+.container-login .top-login a{
+    color: white;
+    text-decoration: none;
+    font-style: normal;
+}
+.container-login .top-login h3{
+    color: black;
+    text-align: center;
+}
+
+.container-login .top-login #recuperar-senha{
+    color: black;
+    font-size: 16px;
+}
+
+.criarConta{
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: nowrap;
+    display: flex;
+}
+.criarConta h3{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.criarConta h4{
+    color: #0093ee;
+    margin: 0 !important;
+    text-decoration: none;
+    font-size: 15px;
+    font-style: bolder !important;
+    padding-left: 1vw;
+}
+.container-login hr{
+    margin-top: 2vw;
+}
+.entrada-administrador{
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 2vw;
+
+}
+.container-login a{
+    text-decoration: none;
+    color: #0093ee;
+}
+#textRecuperar{
+    color: #0093ee;
+    font-size: 15px;
+    font-weight: bolder;
+    font-style: italic;
+}
+/*SIGNUP*/
+.container-login .top-login span{
+    color: #e24b48 ;
+}
+.container-login .top-login p{
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.pag-recuperar-senha{
+    
+}
+@media(max-width:1000px){
+    #pag-login{
+        overflow-y: auto;
+    }
+    #pag-login .container-login{
+        width: 90%;
+        margin: 0 auto;
+        padding: 4vw;
+    }
+    #pag-login .container-login h1{
+        margin-top: 8vw;
+        font-size: 20px;
+    }
+    #pag-login .container-login h3{
+        font-size: 20px;
+    }
+    #pag-login .container-login .criarConta{
+        align-items: center;
+    }
+    #pag-login .container-login p{
+        font-size: 15px;
+        margin-top: 20px;
+    }
+    #pag-login .container-login .form-group{
+        display: block;
+    }
+    .container-login .top-login .form-group #localidade{
+        margin-left: 0vw !important;
+    }
+    #pag-login .container-login .form-group label{
+        display: block;
+    }
+    #pag-login .container-login .form-group input{
+        width: 100% !important;
+    }
+    .signup .top-login .container-sexo select{
+        width: 100%;
+    }
+    .logo{
+        display: block;
+        width: 30vw;
+    }
+    #pag-login .container-left{
+        display: none;
+    }
+    #pag-login .container-login .login-user{
+        padding: 0vw;
+        margin: 0 !important;
+    }
+    #pag-login .container-login.signup{
+        padding-top: 30vw;
+    }
+    #pag-login .container-login h1{
+        margin-bottom: 5vw;
+        font-size: 30px;
+    }
+    #pag-login .container-login input{
+        margin-bottom: 2vw;
+    }
+    #pag-login .container-login h3{
+        font-size: 20px;
+    }
+    #pag-login .container-login small{
+        font-size: 15px;
+        margin-top: 20px;
+    }
+    #pag-login .container-login .top-login button{
+        margin-top: 2vw;
+        margin-bottom: 6vw;
+        padding: 8px !important;
+    }
+    .container-login .top-login .form-group-password svg{
+        margin-top: 7px !important;
+    }
+    .container-login .top-login .form-group-email svg{
+        margin-top: 7px !important;    
+    }
+    .container-login .top-login .form-group-password img{
+        position: absolute;
+        margin-top: 7px !important;
+    }
+    #pag-login .container-login .criarConta{
+        margin-top: 10vw;
+        text-align: center;
+        display: block;
+    }
+    #pag-login .container-login #criarConta{
+        font-size: 15px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .signup{
+        margin-top: 0 !important;
+    }
+}

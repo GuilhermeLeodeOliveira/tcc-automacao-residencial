@@ -1,0 +1,1674 @@
+*{
+    font-family: 'Poppins', sans-serif !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../img/body/background-circuit.png);
+    background-position: fixed !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    background-image: opacity;
+}
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+  
+body::-webkit-scrollbar-track {
+    background: #003f66c7;        /* color of the tracking area */
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: #1c2247;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 30px solid #1c2247;  /* creates padding around scroll thumb */
+}
+
+
+
+/* ini: Preloader */ 
+#preloader {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#0093ee ; /* cor do background que vai ocupar o body */
+    z-index:999999; /* z-index para jogar para frente e sobrepor tudo */
+}
+#preloader .inner {
+    position: absolute;
+    top: 50%; /* centralizar a parte interna do preload (onde fica a animação)*/
+    left: 50%;
+    transform: translate(-50%, -50%);  
+}
+/* end: Preloader */
+.modalCadastro{
+    z-index: 999;
+    width: 40vw;
+    height: 40vw;
+    background-color: #91b3fa;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+.circle{
+    z-index: -999;
+    margin: 0 ;
+    padding: 0;
+    top: -8vw;
+    left: -12vw;
+    position: absolute;
+    clip-path: circle(50% at 50% 50%);
+}
+.circle svg{
+    background: rgb(133,172,254);
+    background: linear-gradient(90deg, rgb(97, 132, 207) 0%, rgb(200, 215, 252) 100%);
+    width: 52vw;
+}
+nav{
+    margin-left: 10vw;
+    margin-right: 10vw;
+    animation-name: animationNav;
+    animation-delay: 0s;
+    animation-duration: 1.2s;
+    padding: 2vw 3vw !important;
+    background-color: transparent;
+ 
+}
+nav .navbar-brand{
+    font-size: 30px;
+    font-weight: bolder;
+}
+nav .nav-item {
+    margin-left: 2vw !important;
+    font-weight: bold;
+    color: rgb(0, 0, 0) !important;
+}
+nav .nav-item img{
+   display: none;
+}
+nav .nav-item a:hover{
+    color: #fe7062;
+}
+.navbar-nav hr{
+    display: none;
+}
+.dropdown-menu{
+    left: -50% ;
+    position: absolute;
+}
+.dropdown-menu .navbar-search{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
+}
+.dropdown-menu .navbar-search input{
+    margin-bottom: 0.7vw;
+    padding: 5px 5px;
+    width: 250px;
+}
+.dropdown-menu .navbar-search button{
+    color: white;
+    font-weight: bolder;
+    padding: 5px 40px;
+    border: 5px solid #e86a5f;
+    border-radius: 10px;
+    background-color: #fe7062;
+}
+.navbar-collapse .session-user{
+    text-align: center !important;
+    margin-left: 16vw;
+    display: flex;
+}
+.navbar-collapse .session-user li{
+    position: absolute !important;
+    list-style: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.navbar-collapse .session-user li .nav-link{
+    color: #1c2247;
+    font-weight: bolder;
+}
+.navbar-collapse .session-user svg{
+    position: relative;
+    float: right;
+    display: flex;
+    margin-left: 9vw;
+}
+.container-modal-services{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,.5);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-modal-services.fechar{
+    display: none;
+}
+.container-modal-services span{
+    cursor: pointer;
+    margin: 2vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.container-modal-services span svg{
+    width: 30px;
+}
+.modal-services{
+    position: relative;
+    padding: 5vw;
+    background-color: rgb(255, 255, 255);
+    width: 30vw;
+}
+.modal-services h2{
+    font-weight: bolder;
+    font-size: 20px;
+    margin-bottom: 1vw;
+}
+.modal-services a{
+    display: flex;
+    text-decoration: none;
+    color: black;
+}
+.modal-services svg{
+    width: 15px;
+    margin-right: 10px;
+}
+main{
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+main .container-main img{
+    margin-left: 30vw;
+    width: 50vw;
+}
+main .container-main .text-main{
+    animation-name: animation;
+    animation-delay: 0s;
+    animation-duration: 1.5s;
+    width: 31vw;
+    text-align: justify;
+    position: absolute;
+    top: 15vw;
+}
+main .container-main .text-main h1{
+    font-weight: bolder;
+    font-size: 60px;
+    color: white;
+    
+
+}
+main .container-main .text-main small{
+    font-weight: bold;
+    font-size: 20px;
+    color:rgba(46,54,128,1);
+}
+main .container-main .text-main p{
+    font-size: 18px;
+    color: rgb(22, 22, 22);
+}
+main .container-main .text-main button{
+    color: white;
+    border: none;
+    background: rgb(22,26,66);
+    background: linear-gradient(90deg, rgba(22,26,66,1) 0%, rgba(46,54,128,1));
+    font-weight: bolder;
+    font-size: 17px;
+    padding: 10px 70px;
+    border-radius: 20px;
+}
+section{
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 4vw;
+    text-align: center;
+}
+section small{
+    font-weight: lighter;
+    color: rgb(97, 97, 97);
+}
+section h3{
+    font-weight: bolder;
+}
+section .container-cards{
+    margin-top: 2vw;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+section .container-cards .container-section a{
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 18px;
+    color: #0093ee !important;
+}
+section .container-section{
+    text-align: center;
+    margin: 1vw;
+}
+section .container-section img{
+    clip-path: circle();
+    width: 20%;
+}
+section .container-section h2{
+    font-weight: bolder;
+    font-size: 20px;
+    margin-top: 1.5vw;
+    margin-bottom: 1vw;
+}
+
+section #btn-veja-todos-servicos{
+    color: rgb(19, 15, 74);
+    border: none;
+    padding: 10px 40px;
+    font-weight: bolder;
+    margin: 10px 0 2vw;
+}
+#content-line{
+    display: block;
+    margin-bottom: 2vw !important;
+    margin: 0 auto;
+    width: 12vw;
+    border-radius: 20px;
+    border: 5px solid #061a27;
+    background-color: #061a27;
+}
+aside{
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 4vw;
+    margin-bottom: 3vw;
+    text-align: center;
+
+}
+aside h3{
+    text-align: left;
+    font-weight: bolder;
+    font-size: 50px;
+    margin-bottom: 2vw;
+}
+aside .container-aside{
+    gap: 4vw;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+aside .container-aside .cards-aside{
+    padding: 1vw;
+    background-color: #ffffff;
+    border: 1px solid black;
+} 
+aside .container-aside .cards-aside:hover{
+    box-shadow: 10px 10px 30px rgb(190, 190, 190);
+}
+aside .container-aside .cards-aside img{
+    width: 100%;
+    height: 25vw;
+    object-fit: cover;
+}
+aside .container-aside .footer-cards-aside{
+    height: 3vw;
+    text-align: left;
+}
+aside .container-aside .footer-cards-aside p{
+    margin-top: 10px;
+    margin-bottom: 0 !important;
+    font-weight: bolder;
+}
+aside .container-aside .footer-cards-aside small{
+    font-style: italic;
+}
+aside .container-aside .footer-cards-aside strong{
+    float: right;
+}
+
+article{
+    margin-left: 0vw;
+    margin-right: 0vw;
+}
+article .container-article{
+    display: flex;
+    margin-left: 0vw;
+    margin-right: 0vw;
+    background: rgb(63, 89, 180,1);
+    background: linear-gradient(-90deg,  rgb(19, 15, 74) 0%, rgb(75, 103, 201) 100%);
+}
+article .container-article .container-article-text{
+    padding: 8vw;
+}
+article .container-article .container-article-text small{
+    text-align: center;
+    color: #fe6f62;
+    font-weight: bolder;
+}
+article .container-article .container-article-text h3{
+    font-weight: bolder;
+    color: white;
+}
+article .container-article .container-article-text p{
+    padding: 0;
+    margin: 0;
+    text-align: justify;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.636);
+}
+article .container-article .container-article-text .cards{
+    margin-top: 2vw;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+article .container-article .container-article-text .cards .card{
+    align-items: center;
+    background: none;
+    border: none;
+}
+article .container-article .container-article-text .cards img{
+    width: 3vw;
+}
+#text-figure{
+    color: #061a27;
+    font-size: 34px;
+    font-weight: bolder;
+    margin: 5vw 10vw;
+}
+#text-figure strong{
+    font-size: 50px;
+}
+figure{
+    margin: 5vw 10vw 10vw !important;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    background-color: white;
+    gap: 1vw;
+}
+figure .card-figure{
+    position: relative;
+    color: white;
+    border: 1px solid #061a27;
+    background-color: #ffffff;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 2vw;
+    border-radius: 15px;
+}
+figure .card-figure img{
+    margin-bottom: 1vw;
+    width: 2vw;
+}
+figure .card-figure .foto-user{
+    clip-path: circle();
+    margin-bottom: 1vw;
+    width: 3vw;
+}
+figure .card-figure p{
+    color: #061a27;
+    margin-top: 1vw;
+    margin-bottom: 4vw;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: normal;
+}
+figure .card-figure .card-cliente{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+}
+figure .card-figure .card-cliente small{
+    margin-left: 1vw;
+    color: #0093ee;
+    font-weight: bold;
+    float: right;
+    
+}
+.modal-container{
+    background-color: rgba(0 , 0 , 0 , .5) !important;
+    position: fixed !important; 
+    display: none;
+    justify-content: center !important;
+    align-items: center !important;
+    left: 0;
+    top: 0;
+    z-index: 200;
+    height: 100%;
+    width: 100%;
+}
+.modal-container.mostrar{
+    display: flex;
+}
+.modal-conteudo{
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    width: 30% !important;
+    height: 80%;
+    border-radius: 20px;
+    min-width: 300px;
+    padding: 40px;
+    background-color: white !important;
+    color: black !important;
+    box-shadow: 0 0 40px rgb(122, 122, 122);
+   
+}
+.modal-conteudo img{
+    margin: 0 auto;
+    display: block;
+    width: 250px;
+} 
+.modal-conteudo button{
+    background-color: black;
+    clip-path: circle();
+    width: 25px;
+    font-weight: bolder;
+    color: white;
+    border: none;
+    margin: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+@keyframes modal{
+    from{
+        opacity: 0;
+        transform: translate3d(0,-60px,0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+.mostrar .modal-conteudo{
+    animation:  modal .9s;
+}
+.footer{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    
+}
+footer{
+    text-align: left;
+    background: rgb(63, 89, 180,1);
+    background: linear-gradient(-90deg,  rgb(19, 15, 74) 0%, rgb(75, 103, 201) 100%);
+}
+footer a{
+    text-decoration: none !important;
+}
+footer .list-unstyled small{
+    color: #add4ff !important;
+    font-weight: bolder !important;
+}
+.text-principal{
+    font-size: 25px !important;
+    color: #f36a5e;
+    font-weight: bolder;
+}
+.text-uppercase{
+    font-size: 15px;
+    color: #f36a5e;
+}
+
+
+/*PÁGINA PERFIL*/
+.pag-perfil{ /*<-- BODY     */
+    background-image: none;
+    background-color: #ffffff !important;
+}
+.pag-perfil main{
+    display: grid;
+    margin-top: 4vw;
+    grid-template-columns: repeat(2, 1fr);
+}
+.pag-perfil .card{
+    border-radius:  0px !important;
+    border: none !important;
+    position: relative;
+    height: 0%;
+}
+.pag-perfil .card .card-header{
+    background-color: #1c2247 !important;
+    color: #ffffff;
+    font-weight: bolder;
+}
+.pag-perfil .card ul{
+    border-radius: 0px 0px 5px 5px;
+    background-color: white ;
+    border: 1px solid #05051d !important;
+}
+.pag-perfil .card ul li{
+    border-radius: 0px 0px 5px 5px;
+    height: 3.5vw;
+    border-bottom: 1px solid #061a2759 !important;
+    padding: 1vw;
+}
+.pag-perfil .card ul a{
+    font-size: 14px;
+    color: black;
+    font-weight: normal;
+    text-decoration: none;
+}
+.pag-perfil .card ul .selected{
+    color: #061b28 !important;
+    font-size: 18px;
+    font-weight: bolder;
+}
+.pag-perfil .container-dados-pessoais .container-servicos-contratados ul{
+    position: relative;
+    color: #061a27;
+    padding-left: 0;
+    width: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    background-color: white;
+    border: 2px solid gainsboro;
+    margin-right: 20vw;
+    padding: 2vw;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+.container-servicos-contratados ul li{
+    color: #0093ee !important;
+    font-weight: bolder !important;
+}
+.container-servicos-contratados ul .nome-servico{
+    color: #000000 !important; 
+    font-weight: bolder !important;
+}
+.container-servicos-contratados ul span{
+    color: black;
+    font-weight: normal !important;
+}
+.pag-perfil .container-dados-pessoais .container-servicos-contratados ul:hover{
+    box-shadow: 5px 7px 15px rgb(187, 187, 187);
+    transition: 0.4s;
+}
+.pag-perfil .informacoes-user{
+    position: relative;
+    color: #061a27;
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    border: 2px solid gainsboro;
+    margin-right: 10vw;
+    padding: 2vw;
+    border-radius: 5px;
+   
+}
+.pag-perfil .informacoes-user ul li{
+    font-size: 18px !important;
+    font-weight: bolder !important;
+    color: #061a27 !important;
+}
+.pag-perfil .informacoes-user span{
+    font-size: 14px !important;
+
+    font-weight: normal;
+}
+.pag-perfil .informacoes-user .top-informacoes{
+    display: flex;
+    margin-left: 0.9vw;
+}
+.pag-perfil .informacoes-user .top-informacoes .text-top{
+    align-self: center; 
+}
+.pag-perfil .informacoes-user .top-informacoes img{
+    width: 120px;
+    
+}
+.pag-perfil .informacoes-user .top-informacoes h3{
+    font-weight: bolder;
+    font-size: 30px;
+}
+.pag-perfil .informacoes-user .top-informacoes small{
+    display: block !important;
+    font-size: 15px;
+
+}
+.pag-perfil .informacoes-user .main-informacoes{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 1.5vw;
+    margin-top: 1vw;
+}
+.pag-perfil .informacoes-user .main-informacoes span{
+    font-weight: normal;
+    display: block;
+    margin-left: 0 !important;
+}
+.pag-perfil .informacoes-user .endereco{
+    margin-left: 1.5vw;
+}
+.pag-perfil .container-dados-pessoais .button-card{
+    float: right;
+}
+.pag-perfil .container-dados-pessoais .button-card button{
+    margin-left: 0.5vw;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-weight: bolder;
+    padding: 7px 15px;
+}
+.pag-perfil .container-dados-pessoais .button-card button:hover{
+    transition: 0.8s;
+}
+.pag-perfil .container-dados-pessoais .button-card .editar-usuario{
+    background-color: #0093ee;
+}
+.pag-perfil .container-dados-pessoais .button-card .editar-usuario:hover{
+    background-color: #014976;
+}
+.pag-perfil .container-dados-pessoais .button-card .deletar-usuario:hover{
+    background-color: red;
+}
+.pag-perfil .container-dados-pessoais .button-card .deletar-usuario{
+    background-color: rgb(221, 48, 48);
+}
+.pag-perfil .container-dados-pessoais h2{
+    border-left: 5px solid #416dff;
+    padding-left: 8px;
+    margin-bottom: 2vw;
+    font-weight: bolder;
+    color: #061a27;
+}
+.pag-perfil .container-dados-pessoais ul .nome-servico{
+    margin-left: 0 !important;
+    color: black;
+    font-weight: bolder;
+    font-size: 22px;
+}
+.pag-perfil .container-dados-pessoais ul .status-servico{
+    margin: 15px;
+    background-color: #e86a5f;
+    color: white;
+    padding: 5px;
+    position: absolute;
+}
+.pag-perfil .container-dados-pessoais ul li{
+    color: rgb(100, 100, 100);
+    font-weight: normal;
+    margin-bottom: 1vw;
+    list-style: none;
+}
+
+.pag-perfil .container-dados-pessoais .status-servico{
+    top: 0;
+    right: 0;
+    color: black;
+    font-weight: 500;
+}
+.pag-perfil .container-dados-pessoais .dados-user{
+    margin-left: 1vw;
+    padding: 2px;
+    border-radius: 5px;
+}
+/* PAGINA EDIT-ME */
+.pag-editando-usuario{
+    background-position: center center;
+    background-size: contain;
+    justify-content: center;
+    padding: 3vw !important;
+    display: flex;
+}
+.pag-editando-usuario .voltar-desktop{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 40px;
+    margin: 2vw;
+}
+.pag-editando-usuario main .voltar{
+    display: none;
+}
+.pag-editando-usuario .container-editar-usuario{
+    width: 30rem;
+}
+.pag-editando-usuario .container-editar-usuario h1{
+    border-left: 5px solid #416dff;
+    padding-left: 5px;
+    margin-bottom: 1.5vw;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.pag-editando-usuario .container-editar-usuario .form-group label{
+    font-weight: bolder;
+}
+.pag-editando-usuario .container-editar-usuario .form-group select{
+    font-weight: bold;
+    color: rgb(67, 67, 67);
+    border-radius: 3px;
+    border: 1px solid #05051d !important;
+    padding: 8px;
+    margin-bottom: 0.5vw;
+    width: 100%;
+}
+.pag-editando-usuario .container-editar-usuario .form-group input{
+    font-weight: bold;
+    color: rgb(67, 67, 67);
+    border: 1px solid #05051d !important;
+    border-radius: 3px;
+    border: none;
+    padding: 8px;
+    display: block;
+    margin-bottom: 0.5vw;
+    width: 100%;
+}
+.pag-editando-usuario .container-editar-usuario .form-button input{
+    cursor: pointer;
+    padding: 5px 30px;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid #3084dd;
+    background-color: #3798ff;
+}
+.pag-faq h4{
+    margin-bottom: 1vw;
+    padding: 0;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 18px;
+    margin-top: 2vw;    
+    font-weight: bolder;
+}
+.pag-faq main{
+    margin: 0 30vw;
+}
+.pag-faq article{
+    margin: 0 20vw;
+}
+.pag-faq main .container-perguntas{
+    background-color: white;
+    border: 1px solid rgba(220, 220, 220, 0.813);
+    padding: 1.2vw;
+    margin-bottom: 1vw;
+}
+.pag-faq main .container-perguntas h3{
+    margin-bottom: 1vw;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 18px;
+}
+.pag-faq main .container-perguntas p{
+    font-size: 14px;
+}
+.pag-faq main h4{
+    margin-bottom: 10px;
+    padding: 0;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 18px;
+    margin-top: 2vw;    
+}
+.pag-faq main small{
+    justify-content: center;
+    display: flex;
+    font-size: 13px;
+    color: rgb(121, 121, 121);
+}
+.pag-faq main hr{
+    margin-top: 5vw;
+}
+.pag-faq main .opcoes-faq{
+    margin-top: 1vw;
+    justify-content: center;
+    display: flex;
+}
+.pag-faq main .opcoes-faq svg{
+    color: #0093ee;
+    margin-right: 1vw;
+}
+.pag-faq main .opcoes-faq p{
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 1vw;
+    padding: 10px 30px;
+    font-size: 15px;
+    font-weight: normal;
+    color: rgba(0, 0, 0, 0.863);
+    border: 1px solid rgba(220, 220, 220, 0.813);
+}
+.pag-faq main span{
+    font-weight: bolder;
+    margin-left: 5px;
+}
+.pag-faq article{
+    gap: 1vw;
+    justify-content: center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.pag-faq article .container-social{
+    justify-content: center;
+    padding: 1vw;
+    border: 1px solid rgba(220, 220, 220, 0.813);
+}
+.pag-faq article .container-social a{
+    color: black !important;
+    text-decoration: none !important;
+}
+.pag-faq article .container-social svg{
+    margin-bottom: 0.8vw;
+    margin-right: 0.5vw;
+}
+.pag-faq article .container-social:hover{
+    box-shadow: 5px 7px 15px rgb(187, 187, 187);
+    transition: 0.4s;
+}
+.pag-faq footer{
+    margin-top: 10vw;
+}
+/*PÁGINA SENSOR DE PROXIMIDADE*/
+.servicos .circle{
+    display: none;
+}
+
+
+/*PAGINAS SERVIÇOS*/
+.servicos main{
+    padding: 3vw;
+    background-image: url(../img/servicos/portao-eletrico/portao.png);
+    background-position: right !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-image: opacity;
+}
+.servicos .ambientacao{
+    background-image: url(../img/servicos/ambientacao/iluminacao.png);
+}
+.servicos .sensor-de-proximidade{
+    background-image: url(../img/servicos/sensor-proximidade/sensor-de-proximidade.png);
+    background-position: right !important;
+    background-repeat: no-repeat !important;
+    background-size: 70% !important;
+    background-image: opacity;
+}
+.servicos .sensor-de-fumaca{
+    background-image: url(../img/servicos/sensor-de-fumaca/sensor-de-fumaca.png);
+}
+.servicos .controle-de-tv{
+    background-image: url(../img/servicos/controle-de-tv/controle-de-tv.png);
+}
+.servicos .som{
+    background-image: url(../img/servicos/som/som.png);
+}
+.servicos .cortinas{
+    background-image: url(../img/servicos/cortinas/cortinas.png);
+    background-size: 70% !important;
+}
+.servicos .ar-condicionado{
+    background-image: url(../img/servicos/ar-condicionado/ar-condicionado.png);
+}
+.servicos .controle-de-cameras{
+    background-image: url(../img/servicos/controle-de-cameras/controle-de-cameras.png);
+}
+.servicos .alarmes{
+    background-image: url(../img/servicos/alarmes/alarmes.png);
+}
+.servicos .fechadura-eletronica{
+    background-image: url(../img/servicos/fechadura-eletronica/fechadura.png);
+}
+.servicos .audio-video{
+    background-image: url(../img/servicos/audio-video/audio-video.png);
+}
+
+.servicos .container-text{
+    z-index: 9999;
+}
+.servicos .container-text h1{
+    color: black;
+    font-weight: bolder;
+    font-size: 60px;
+}
+.servicos .container-text p{
+    width: 40%;
+    text-align: justify;
+    font-size: 22px;
+    font-weight: lighter;
+    color: rgb(32, 32, 32);
+}
+.servicos .container-text .cards-servicos{
+    width: 40%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5vw;
+}
+.servicos .container-text .cards-servicos .cards p{
+    margin: 0;
+    font-weight: bolder;
+    font-size: 16px;
+    color: black;
+}
+.servicos .container-text .cards-servicos .cards small{
+    margin-bottom: 2vw !important;
+}
+.servicos .container-text .cards-servicos{
+    white-space: nowrap;
+
+    position: relative;
+}
+.servicos .container-text .cards-servicos #contrate-servico{
+    float: right;
+    background-color: black;
+    border: none;
+    color: white;
+    font-weight: bolder;
+    padding: 10px 30px;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.servicos .container-text .cards-servicos #contrate-servico:hover{
+    padding: 10px 60px;
+    transition: 800ms linear; 
+    transition-delay: 0.5ms;
+    background-color: #3084dd;
+}
+.servicos footer{
+    margin-top: 20vw;
+}
+/* TELA PÁGINA LOGIN ADMINISTRADOR */
+.pag-login-admin{
+    background-image: none;
+    background-color: #061a27;
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.pag-login-atendente #voltar{
+    width: 40px ;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    margin: 30px;
+}
+.pag-login-admin #voltar{
+    width: 40px ;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    margin: 30px;
+}
+.pag-login-admin .container-login-admin .top-login{
+    margin-bottom: 1.5vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.pag-login-admin .container-login-admin .top-login img{
+    margin: 0 auto;
+    clip-path: circle();
+    object-fit: cover;
+    width: 80px;
+}
+.pag-login-admin .container-login-admin .top-login small{
+    font-weight: bolder;
+    color: white;
+    margin: 10px;
+}  
+.pag-login-admin .container-login-admin .main-login{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.pag-login-admin .container-login-admin .main-login .form-group-email input{
+    font-weight: bold;
+    border-radius: 7px;
+    padding: 18px 40px;
+    padding-left: 35px;
+    position: relative;
+    border: 2px solid black;
+    width: 350px;
+    height: 30px;
+    margin-bottom: 10px;
+    display: block;
+} 
+.pag-login-admin .container-login-admin .main-login .form-group-email svg{
+    margin-top: 5px;
+    position: absolute;
+    width: 15px;
+    margin-left: 12px;
+    z-index: 50;
+}
+.pag-login-admin .container-login-admin .main-login .form-group-password input{
+    font-weight: bold;
+    border-radius: 7px;
+    padding: 18px 40px;
+    padding-left: 35px;
+    position: relative;
+    border: 2px solid black;
+    width: 350px;
+    height: 30px;
+    margin-bottom: 10px;
+    display: block;
+} 
+.pag-login-admin .container-login-admin .main-login .form-group-password svg{
+    margin-top: 5px;
+    position: absolute;
+    width: 15px;
+    margin-left: 12px;
+    z-index: 50;
+}
+.pag-login-admin .container-login-admin .main-login .form-group-password img{
+    cursor: pointer;
+    margin-top: 15px;
+    margin-right: 10px;
+    right: 0;
+    width: 30px;
+    position: absolute;
+}
+.pag-login-admin .container-login-admin .main-login button{
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    background-color: #0093ee;
+    border: none;
+    border-radius: 7px;
+    margin-top: 10px;
+    padding: 5px 20px;
+}
+.pag-login-admin .container-login-admin .footer-login{
+    font-size: 12px;
+    margin-top: 1vw;
+    text-align: center;
+}
+.pag-login-admin .container-login-admin .footer-login a{
+    color: white;
+    text-decoration: none;
+}
+/* FIM TELA PÁGINA LOGIN ADMINISTRADOR */
+
+/* TELA PÁGINA LOGIN ATENDENTE */
+.pag-login-atendente{
+    background-image: none;
+    background-color: #1c2247;
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.pag-login-atendente .container-login-admin .top-login{
+    margin-bottom: 1.5vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.pag-login-atendente .container-login-admin .top-login img{
+    margin: 0 auto;
+    clip-path: circle();
+    object-fit: cover;
+    width: 80px;
+}
+.pag-login-atendente .container-login-admin .top-login small{
+    font-weight: bolder;
+    color: white;
+    margin: 10px;
+}  
+.pag-login-atendente .container-login-admin .main-login{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.pag-login-atendente .container-login-admin .main-login input{
+    font-weight: bold;
+    border-radius: 7px;
+    padding: 18px 40px;
+    padding-left: 35px;
+    position: relative;
+    border: 2px solid black;
+    width: 350px;
+    height: 30px;
+    margin-bottom: 10px;
+    display: block;
+}
+.pag-login-atendente .container-login-admin .main-login svg{
+    margin-top: 5px;
+    position: absolute;
+    width: 15px;
+    margin-left: 12px;
+    z-index: 50;
+}
+.pag-login-atendente .container-login-admin .main-login button{
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    background-color: #0093ee;
+    border: none;
+    border-radius: 7px;
+    margin-top: 10px;
+    padding: 5px 20px;
+}
+.pag-login-atendente .container-login-admin .footer-login{
+    font-size: 12px;
+    margin-top: 1vw;
+    text-align: center;
+}
+.pag-login-atendente .container-login-admin .footer-login a{
+    color: white;
+    text-decoration: none;
+}
+@media(max-width:1000px){
+    body,html{
+        overflow-x: hidden;
+    }
+    body{
+        background-position: fixed !important;
+        background-repeat: no-repeat !important;
+        background-size: contain !important;
+        background-image: opacity;
+    }
+    nav .form-inline{
+        margin-left: 0vw;
+        display: flex;
+    }
+    .navbar-nav{
+        z-index: 9999;
+    }
+    .navbar-nav a{
+        font-size: 17px;
+        font-weight: bolder;
+        color: #061a27;
+        
+    }
+    nav .nav-item img{
+        display: inline-block;
+        margin-right: 2.5vw;
+        width: 5vw;
+    }
+    .navbar-nav hr{
+        display: block;
+        border: 2px solid #1c2247;
+    }
+    .dropdown-menu a{
+        color: black;
+    }
+    .dropdown-menu .navbar-search{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 2vw;
+    }
+    .dropdown-menu .navbar-search input{
+        text-align: center;
+        margin-bottom: 3vw;
+    }
+    .navbar-collapse .session-user{
+        margin-bottom: 15vw;
+    }
+    .navbar-collapse .session-user svg{
+        margin-left: 45vw;
+    }
+    .circle {
+        z-index: -999;
+        margin: 0 ;
+        padding: 0;
+        top: -60vw;
+        left: 0%;
+        position: absolute;
+        clip-path: circle(50% at 50% 50%);
+    }
+    .circle svg{
+        width: 100vw !important;
+        height: 320vw !important;
+    }
+    .circle svg{
+        background: rgb(133,172,254);
+        background: linear-gradient(90deg, rgb(97, 132, 207) 0%, rgba(189,208,251,1) 100%);
+        width: 300vw;
+        height: 400vw;
+    }
+    
+    main .container-main img{
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;;
+    }
+    main .container-main .text-main{
+        animation-name: animation;
+        animation-delay: 0s;
+        animation-duration: 1.5s;
+        width: 95%;
+        text-align: justify;
+        position: relative;
+        top: 15vw;
+    }
+    main .container-main .text-main h1{
+        font-size: 45px;
+    }
+    section{
+        margin-top: 28vw;
+    }
+    section .container-cards{
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    } 
+    section .container-cards .container-section p{
+        padding: 20px;
+        text-align: justify;
+    } 
+    #content-line{
+        width: 30vw;
+    }
+    aside{
+        margin-top: 10vw;
+        margin-bottom: 10vw;
+    }
+    aside h3{
+        padding: 7vw;
+        padding-left: 0vw;
+        font-size: 35px;
+    }
+    aside .container-aside{
+        gap: 4vw;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    aside .container-aside .cards-aside{
+        padding: 3vw;
+    }
+    aside .container-aside .cards-aside img{
+        height: 70vw;
+    }
+
+
+    article .container-article{
+        display: block;
+    }
+    article .container-article img{
+        width: 100%;
+    }
+    article .container-article .container-article-text .cards{
+        margin-top: 10vw;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    article .container-article .container-article-text .cards img{
+        width: 20vw;
+    }
+    article .container-article .container-article-text .cards small{
+        margin-bottom: 5vw;
+    }
+    #text-figure{
+        color: #061a27;
+        font-size: 35px;
+        font-weight: bolder;
+        margin: 8vw 10vw;
+    }
+    #text-figure strong{
+        font-size: 35px;
+    }
+    figure{
+        margin: 10vw !important;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 1vw;
+    }
+    figure .card-figure{
+        padding: 8vw 10vw;
+        margin-bottom: 3vw;
+    }
+    figure .card-figure img{
+        width: 6vw;
+    }
+    figure .card-figure p{
+        margin-bottom: 12vw;
+    }
+    figure .card-figure .foto-user{
+        width: 10vw;
+    }
+    /* Modal pesquisa de serviços */
+    .container-modal-services .modal-services{
+        height: 40rem;
+        margin: 2vw;
+        padding: 10vw;
+        width: 100% !important;
+    }
+    .container-modal-services .modal-services h2{
+        margin-bottom: 6vw !important;
+    }
+    /*PÁGINA PERFIL*/
+    .pag-perfil main{
+        gap: 2vw;
+        margin: 5vw;
+        display: grid;
+        margin-top: 4vw;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .pag-perfil main .card{
+        margin-bottom: 0 !important;
+        margin-top: 25vw;
+        width: 100% !important;
+        justify-content: center;
+    }
+    .pag-perfil main .card ul {
+        padding: 2vw !important;
+    }
+    .pag-perfil main .card ul li{
+        margin-top: 1vw;
+        height: 10vw;
+        background-color: transparent !important;
+        border: none !important;
+    }
+    .pag-perfil main .card .list-group{
+        padding: 5vw;
+
+    }
+ 
+    .pag-perfil .session-perfil .informacoes-user{
+        margin-top: 0 !important;
+        text-align: center;
+        padding: 5vw;
+        width: 100%;
+    }
+    .pag-perfil .session-perfil .informacoes-user h2{
+        text-align: left;
+        font-size: 16px;
+    }
+    .pag-perfil .session-perfil .informacoes-user ul{
+        padding: 0 !important;
+    }
+    .pag-perfil .session-perfil .informacoes-user .top-informacoes{
+        margin-top: 3vw;
+        display: block;
+    }
+    .pag-perfil .session-perfil .informacoes-user .top-informacoes img{
+        width: 100px;
+    }
+    .pag-perfil .session-perfil .informacoes-user .top-informacoes h3{
+        margin: 0;
+        font-size: 18px;
+    }
+    .pag-perfil .session-perfil .informacoes-user .main-informacoes{
+        margin-top: 3vw;
+    }
+    .pag-perfil .session-perfil .informacoes-user .button-card{
+        margin-top: 6vw;
+    }
+    .pag-perfil .container-dados-pessoais .endereco{
+        font-size: 14px;
+        
+    }
+    .pag-perfil .container-dados-pessoais .dados-user{
+        word-break: break-all;
+        display: block;
+    }
+    .pag-perfil .informacoes-user{
+        margin-bottom: 20vw;
+    }
+    .pag-perfil .informacoes-user .main-informacoes{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .pag-perfil .informacoes-user .top-informacoes{
+        margin-top: 8vw !important;
+    }
+    .pag-perfil .informacoes-user .top-informacoes img{
+        width: 80px !important;
+    }
+    /* PÁGINA SERVIÇOS CONTRATADOS > PERFIL */
+    .container-dados-pessoais #title-services{
+        color: white !important;
+        padding-bottom: 4vw !important; 
+    }
+    .container-servicos-contratados ul{
+        width: 100% !important;
+    }
+    .container-servicos-contratados ul span{
+        white-space: normal;
+        font-size: 15px !important;
+    }
+    /* PAGINA EDIT-ME */
+    .pag-editando-usuario{
+        background-position: center;
+        background-size: contain !important;
+    }
+    .pag-editando-usuario .voltar-desktop{
+        margin-bottom: 5vw;
+        margin: 4vw;
+    }
+    .pag-editando-usuario main{
+        margin-top: 15vw;
+        display: block;
+        width: 100%;
+        padding: 3vw;
+    }
+    .pag-editando-usuario .form-group input{
+        margin-bottom: 3.3vw !important;
+        width: 70% !important;
+    }
+    .pag-editando-usuario .form-group select{
+        margin-bottom: 3.3vw !important;
+        width: 70% !important;
+        display: block;
+    }
+    .pag-editando-usuario .form-button input{
+        width: 70% !important;
+        margin-top: 4vw;
+
+    }
+    /* PÁGINA SERVIÇOS CONTRATADOS */
+    .servicos-contratados .card{
+        width: 10% !important;
+    }
+    
+    /*PÁGINA FAQ PERGUNTAS*/
+    .pag-faq main{
+        margin: 0 10vw;
+    }
+    .pag-faq main .container-perguntas{
+        background-color: white;
+        border: 1px solid rgb(230, 230, 230);
+        padding: 4vw;
+        margin-bottom: 2vw;
+    }
+    .pag-faq main .container-perguntas h3{
+        font-size: 16px;
+        margin-bottom: 3vw;
+    }
+    .pag-faq main .opcoes-faq{
+        background-color: white;
+        margin-top: 3vw;
+        justify-content: center;
+        display: block;
+    }
+    .pag-faq article{
+        margin: 5vw;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .pag-faq article .container-social{
+        background-color: white;
+        margin-bottom: 3vw;
+        padding: 8vw;
+        width: 100% !important;
+    }
+    /*PÁGINA SENSOR DE PROXIMIDADE*/
+    .pag-sensor-proximidade main{
+        display: block;
+    }
+    .pag-sensor-proximidade main img{
+        width: 100%;
+        height: 80vw;
+        object-fit: cover;
+    }
+    .pag-sensor-proximidade main .container-text-sensor-proximidade #contrate-servico{
+        padding: 3vw 4vw;
+        display: flex;
+        margin: 0 auto;
+    }
+    .pag-sensor-proximidade main .container-text-sensor-proximidade .cards-sensor-proximidade{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .pag-sensor-proximidade main .container-text-sensor-proximidade h1{
+       font-size: 25px;
+       font-weight: bolder;
+    }
+    .pag-sensor-proximidade main .container-text-sensor-proximidade p{
+        width: 100%;
+        font-size: 20px;
+        margin-bottom: 10vw;
+
+    }
+    .pag-sensor-proximidade main .container-text-sensor-proximidade .cards-sensor-proximidade .cards{
+        margin-bottom: 5vw;
+        padding: 10vw;
+        width: 100%;
+    }
+    .pag-sensor-proximidade main .container-text-sensor-proximidade .cards-sensor-proximidade .cards img{
+        width: 15vw;
+        height: 15vw;
+        margin: 2vw;
+    }
+    .pag-sensor-proximidade footer{
+        padding-top: 200vw;
+    }
+    /*PÁGINA PORTAO ELÉTRICO*/
+    .pag-portao-eletrico main{
+        display: block;
+    }
+    .pag-portao-eletrico main img{
+        width: 100%;
+        height: 80vw;
+        object-fit: cover;
+    }
+    .pag-portao-eletrico main .container-text-portao-eletrico #contrate-servico{
+        padding: 3vw 4vw;
+        display: flex;
+        margin: 0 auto;
+    }
+    .pag-portao-eletrico main .container-text-portao-eletrico .cards-portao-eletrico{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .pag-portao-eletrico main .container-text-portao-eletrico h1{
+       font-size: 25px;
+       font-weight: bolder;
+    }
+    .pag-portao-eletrico main .container-text-portao-eletrico p{
+        width: 100%;
+        font-size: 20px;
+        margin-bottom: 10vw;
+
+    }
+    .pag-portao-eletrico main .container-text-portao-eletrico .cards-portao-eletrico .cards{
+        margin-bottom: 5vw;
+        padding: 10vw;
+        width: 100%;
+    }
+    .pag-portao-eletrico main .container-text-portao-eletrico .cards-portao-eletrico .cards img{
+        width: 15vw;
+        height: 15vw;
+        margin: 2vw;
+    }
+    .pag-login-admin #voltar{
+        margin-top: 20px;
+        left: 0 !important;
+    }
+    .pag-login-atendente #voltar{
+        margin-top: 20px;
+        left: 0 !important;
+    }
+    .pag-login-admin{
+        margin: 10vw 0vw 0vw 0vw;
+    }
+    .pag-login-admin .container-login-admin .top-login small{
+        font-size: 18px;
+        margin-bottom: 5vw;
+    }  
+    .pag-login-admin .container-login-admin .main-login button{
+        padding: 7px;
+    }
+    .pag-login-admin .container-login-admin .footer-login{
+        margin-top: 4vw;
+    }
+    .pag-login-admin .container-login-admin .footer-login a{
+        font-size: 14px;
+    }   
+    /* PAGINA LOGIN ATENDENTE */
+    .pag-login-atendente{
+        margin: 10vw 0vw 0vw 0vw;
+    }
+    .pag-login-atendente .container-login-admin .top-login small{
+        font-size: 18px;
+        margin-bottom: 5vw;
+    }  
+    .pag-login-atendente .container-login-admin .main-login button{
+        padding: 7px;
+    }
+    .pag-login-atendente .container-login-admin .footer-login{
+        margin-top: 4vw;
+    }
+    .pag-login-atendente .container-login-admin .footer-login a{
+        font-size: 14px;
+    }
+    /* Páginas serviços */
+    .servicos main{
+        padding: 3vw;
+        background-image: none !important;
+    }
+    .servicos .container-text .cards-servicos{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .servicos .container-text .cards-servicos #contrate-servico{
+        position: relative;
+        margin-top: 2.5vw;
+    }
+    .servicos .container-text h1{
+        font-size: 45px;
+        width: 100%;
+     }
+    .servicos .container-text p{
+       width: 100%;
+    }
+    .servicos .container-text p{
+        width: 100%;
+     }
+    footer{
+        text-align: center;       
+    }
+}
+@keyframes animation{
+    from{
+        transform: translate3d(-500px,100px,0);
+        opacity: 0;
+    }
+    to{
+        transform: translate3d(0px,0px,0px);
+        opacity: 1;
+    }
+}
+@keyframes animationNav{
+    from{
+        transform: translate3d(0px,-100px,0);
+        opacity: 0;
+    }
+    to{
+        transform: translate3d(0px,0px,0px);
+        opacity: 1;
+    }
+}

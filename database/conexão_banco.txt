@@ -1,0 +1,7 @@
+#Azure MySQL Connect
+
+database= fourhouse_db
+hostname= fourhouse-db-server.mysql.database.azure.com
+username= daviDsoareSS@fourhouse-db-server
+password= David12304$ 
+port= 3306 
